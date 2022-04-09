@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+import jon_functions as jon
 
 app = Flask(__name__)
 
@@ -11,4 +12,5 @@ def hello_world():
 
 @app.route('/binance')
 def binance():
-    return render_template('binance.html', title="Binance")
+    watchlist = jon.check_the_watchlist()
+    return render_template('binance.html', title="Binance", posts=watchlist)

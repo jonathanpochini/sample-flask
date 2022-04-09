@@ -1,0 +1,12 @@
+name: sample-flask
+region: tor
+services:
+- git:
+    branch: main
+    repo_clone_url: https://github.com/jonathanpochini/sample-flask.git
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: web
+  routes:
+  - path: /
