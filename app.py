@@ -10,9 +10,8 @@ def hello_world():
     return render_template("index.html")
 
 @app.route("/about")
-def hello_world():
+def about():
     return render_template("about.html")
-
 
 @app.route('/binance')
 def binance():
